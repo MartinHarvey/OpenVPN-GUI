@@ -9,8 +9,12 @@ class connection():
             filetypes = (("ovpn files","*.ovpn"),
                          ("all files", ".*"))
         )
-    
-        subprocess.run(["openvpn", "--config", self.filePath])
+
+        proc = subprocess.Popen(['/usr/local/sbin/openvpn', 
+                                "--config", 
+                                self.filePath])
+        proc.communicate()[0]
+        
     
     def disconnect(self):
         subprocess.run(["sudo", "killall", "openvpn"])

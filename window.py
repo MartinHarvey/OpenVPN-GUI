@@ -1,4 +1,4 @@
-from tkinter import Tk, Label, Button
+from tkinter import Tk, Label, Button, Text
 from connection import *
 
 class Window:
@@ -20,6 +20,13 @@ class Window:
             command = lambda: Window.disconnect(self),
             state = 'disabled')
         self.disconnectButton.pack()
+
+        self.statusText = Label(
+            master,
+            height = 4,
+            width = 25           
+        )
+        self.statusText.pack()
     
 
     def Open(self):
