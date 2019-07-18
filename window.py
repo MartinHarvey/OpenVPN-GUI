@@ -30,20 +30,21 @@ class Window:
         )
         self.statusText.pack()
         '''
-        self.protocol(
-            master,
+        master.protocol(
             "WM_DELETE_WINDOW",
             self.onExit()
         )
         '''
 
     def Open(self):
-        self.con = connection()
         self.disconnectButton['state'] = 'normal'
+        self.con = connection()
+        
 
     def disconnect(self):
         self.con.disconnect()
     
-    def onExit(self):
-        self.disconnect()
-        self.destroy()
+    def onExit(self, master):
+        if(self.con != None):
+            self.disconnect()
+        master.destroy()
