@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from tkinter import Tk, Label, Button, Text
-from connection import *
+from connection import connection
 
 
 class Window:

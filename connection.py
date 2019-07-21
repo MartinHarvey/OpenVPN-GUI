@@ -11,7 +11,8 @@ class connection():
                          ("all files", ".*"))
         )
 
-        proc = subprocess.Popen(['/usr/sbin/openvpn',
+        proc = subprocess.Popen(['sudo',
+                                '/usr/local/sbin/openvpn',
                                 "--config",
                                 self.filePath])
         out = proc.communicate()[0]
