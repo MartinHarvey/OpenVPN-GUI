@@ -26,7 +26,8 @@ class Window:
         self.statusText = Label(
             master,
             height = 4,
-            width = 25
+            width = 25,
+            text = "Select a .ovpn file \n using the file dialog."
         )
         self.statusText.pack()
  
