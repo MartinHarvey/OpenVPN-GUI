@@ -12,7 +12,7 @@ class connection():
         )
 
         proc = subprocess.Popen(['sudo',
-                                '/usr/local/sbin/openvpn',
+                                '/usr/sbin/openvpn',
                                 "--config",
                                 self.filePath])
         out = proc.communicate()[0]
