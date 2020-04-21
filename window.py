@@ -22,7 +22,7 @@ class Window:
             command = lambda: Window.disconnect(self),
             state = 'disabled')
         self.disconnectButton.pack()
-
+        
         self.statusText = Label(
             master,
             height = 4,
